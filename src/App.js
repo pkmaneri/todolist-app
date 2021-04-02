@@ -58,11 +58,10 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <table>
+        <table className="table">
           <tbody>
             <Switch>
               <tr>
-
                 <td>
                   <h1>
                     Create

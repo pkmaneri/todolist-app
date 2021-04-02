@@ -15,17 +15,14 @@ const Todo = (props) => {
     const handleOnChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-
         const previousState = JSON.parse(JSON.stringify(state));
         previousState[name] = value;
-
         setState(previousState);
-
     }
 
     return (
         <>
-            <table>
+            <table className="table">
                 <thead></thead>
                 <tbody>
                     <tr>
@@ -82,7 +79,7 @@ const Todo = (props) => {
 
                     </td>
                     <td>
-                        <button onClick={handleClick.bind(this)}>AddItem</button>
+                        <button className="btn btn-primary" onClick={handleClick.bind(this)}>AddItem</button>
                     </td>
                 </tbody>
             </table>

@@ -10,7 +10,7 @@ const UpdateTodo = (props) => {
     })
 
     useEffect(() => {
-        console.log(props["updateData"]["updateObj"]['ele'])
+        // console.log(props["updateData"]["updateObj"]['ele'])
         if (props["updateData"]["updateObj"]['ele'] !== undefined)
             setUpdateNewState(props["updateData"]["updateObj"]['ele'])
     }, [props])
@@ -31,7 +31,7 @@ const UpdateTodo = (props) => {
     }
     return (
         <>
-            <table>
+            <table className="table">
                 <thead></thead>
                 <tbody>
                     <tr>
@@ -88,7 +88,7 @@ const UpdateTodo = (props) => {
                         <td>
                         </td>
                         <td>
-                            <button onClick={handleClickUpdate.bind(this)}>UpdateItem</button>
+                            <button className="btn btn-primary" onClick={handleClickUpdate.bind(this)}>UpdateItem</button>
                         </td>
                     </tr>
                 </tbody>

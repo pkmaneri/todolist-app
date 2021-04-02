@@ -1,22 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Navbar = () => {
     return (
         <>
-            <ul>
-                <Link exect to="/todo">
-                    <li>Todo</li>
-                </Link>
-                <Link exect to="/updateTodo">
-                    <li>UpdateTodo</li>
-                </Link>
-                <Link exect to="/todoList">
-                    <li>TodoList</li>
-                </Link>
-            </ul>
+            <div className="row">
+                <div className="col">
+                    <Link exect to="/todo">
+                        <li className="list-group-item active">Todo</li>
+                    </Link>
+                </div>
+                <div className="col">
+                    <Link exect to="/updateTodo">
+                        <li className="list-group-item active">UpdateTodo</li>
+                    </Link>
+                </div>
+                <div className="col">
+                    <Link exect to="/todoList">
+                        <li className="list-group-item active">TodoList</li>
+                    </Link>
+                </div>
+            </div>
+        
         </>
     )
 }
