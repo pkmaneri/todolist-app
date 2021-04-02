@@ -26,62 +26,64 @@ const Todo = (props) => {
     return (
         <>
             <table>
-                <tr>
-                    <td>
-                        <label>
-                            First Name
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>
+                                First Name
 			            </label>
-                    </td>
-                    <td>
-                        <input name="firstName" value={state.firstName} onChange={(e) => handleOnChange(e)}></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            Last Name
+                        </td>
+                        <td>
+                            <input name="firstName" value={state.firstName} onChange={(e) => handleOnChange(e)}></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Last Name
 			            </label>
-                    </td>
-                    <td>
-                        <input name="lastName" value={state.lastName} onChange={(e) => handleOnChange(e)}></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            Address
+                        </td>
+                        <td>
+                            <input name="lastName" value={state.lastName} onChange={(e) => handleOnChange(e)}></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Address
 			            </label>
-                    </td>
-                    <td>
-                        <input name="address" value={state.address} onChange={(e) => handleOnChange(e)}></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            City
+                        </td>
+                        <td>
+                            <input name="address" value={state.address} onChange={(e) => handleOnChange(e)}></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                City
 			            </label>
-                    </td>
-                    <td>
-                        <input name="city" value={state.city} onChange={(e) => handleOnChange(e)}></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            Zip
+                        </td>
+                        <td>
+                            <input name="city" value={state.city} onChange={(e) => handleOnChange(e)}></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Zip
 			            </label>
-                    </td>
+                        </td>
+                        <td>
+                            <input name="zip" value={state.zip} onChange={(e) => handleOnChange(e)}></input>
+                        </td>
+                    </tr>
                     <td>
-                        <input name="zip" value={state.zip} onChange={(e) => handleOnChange(e)}></input>
+
                     </td>
-                </tr>
-                <tr>
-                    <td></td>
                     <td>
                         <button onClick={handleClick.bind(this)}>AddItem</button>
                     </td>
-                </tr>
+                </tbody>
             </table>
         </>
     )

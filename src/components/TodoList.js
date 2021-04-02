@@ -14,15 +14,23 @@ const TodoList = (props) => {
                 {props["data"].map((ele, i) => {
                     console.log(ele, i)
                     return (
-                        <tr key={i}>
+                        <tr key={i}>                          
                             <td>
-                                {ele.firstName}
+                                {ele.firstName},
                             </td>
                             <td>
-                                {ele.lastName}
+                                {ele.lastName},
                             </td>
                             <td>
-
+                                {ele.address},
+                            </td>
+                            <td>
+                                {ele.city},
+                            </td>
+                            <td>
+                                {ele.zip},
+                            </td>
+                            <td>
                                 <button onClick={handleUpdate.bind(this, ele, i)}>U</button>
                                 <button onClick={handleClickRemove.bind(this, i)}>X</button>
                             </td>

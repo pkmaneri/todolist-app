@@ -28,8 +28,6 @@ function App() {
     setState({
       listItem
     })
-
-
   }
   const handleUpdate = (ele, i) => {
     // console.log(ele, i)
@@ -40,10 +38,10 @@ function App() {
       }
     })
   }
-  const handleNewUpdate = (index, newFirstName) => {
-    console.log(index, newFirstName)
+  const handleNewUpdate = (index, newValue) => {
+    console.log(index, newValue)
     const listItem = [...state["listItem"]];
-    listItem[index] = newFirstName
+    listItem[index] = newValue
     setState({
       listItem
     })
@@ -58,9 +56,7 @@ function App() {
               Create
           </h1>
             <Todo callback={handleTodo} />
-
           </td>
-
           <td>
             <h1>
               Update
@@ -73,7 +69,6 @@ function App() {
               Read / Delete
           </h1>
             <TodoList data={state["listItem"]} callback={handleRemove} callbackUpdate={handleUpdate} />
-
           </td>
         </tr>
       </table>
