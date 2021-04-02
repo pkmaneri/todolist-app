@@ -26,6 +26,7 @@ const Todo = (props) => {
     return (
         <>
             <table>
+                <thead></thead>
                 <tbody>
                     <tr>
                         <td>

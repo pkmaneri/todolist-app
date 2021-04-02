@@ -3,6 +3,13 @@ import './App.css';
 import Todo from './components/Todo';
 import TodoList from './components/TodoList';
 import UpdateTodo from './components/UpdateTodo';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Navbar from './components/Navbar';
+
 
 function App() {
   const [state, setState] = useState({
@@ -49,29 +56,45 @@ function App() {
   }
   return (
     <div className="App">
-      <table>
-        <tr>
-          <td>
-            <h1>
-              Create
-          </h1>
-            <Todo callback={handleTodo} />
-          </td>
-          <td>
-            <h1>
-              Update
-          </h1>
-            <UpdateTodo updateData={updateState} callback={handleNewUpdate} />
+      <Router>
+        <Navbar />
+        <table>
+          <tbody>
+            <Switch>
+              <tr>
 
-          </td>
-          <td>
-            <h1>
-              Read / Delete
-          </h1>
-            <TodoList data={state["listItem"]} callback={handleRemove} callbackUpdate={handleUpdate} />
-          </td>
-        </tr>
-      </table>
+                <td>
+                  <h1>
+                    Create
+                  </h1>
+                  <Route path="/todo">
+                    <Todo callback={handleTodo} />
+                  </Route>
+
+                </td>
+                <td>
+                  <h1>
+                    Update
+               </h1>
+                  <Route path="/updateTodo">
+                    <UpdateTodo updateData={updateState} callback={handleNewUpdate} />
+                  </Route>
+
+                </td>
+                <td>
+                  <h1>
+                    Read / Delete
+               </h1>
+                  <Route path="/todoList">
+                    <TodoList data={state["listItem"]} callback={handleRemove} callbackUpdate={handleUpdate} />
+                  </Route>
+                </td>
+              </tr>
+            </Switch>
+          </tbody>
+        </table>
+
+      </Router>
 
     </div>
   );
