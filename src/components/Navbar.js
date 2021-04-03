@@ -6,18 +6,18 @@ const Navbar = () => {
         <>
             <div className="row">
                 <div className="col">
-                    <Link exect to="/todo">
-                        <li className="list-group-item active">Todo</li>
+                    <Link exact to="/todo">
+                        <li className="list-group-item active">Create User</li>
                     </Link>
                 </div>
                 <div className="col">
-                    <Link exect to="/updateTodo">
-                        <li className="list-group-item active">UpdateTodo</li>
+                    <Link  to="/updateTodo">
+                        <li className="list-group-item active"> Update User</li>
                     </Link>
                 </div>
                 <div className="col">
-                    <Link exect to="/todoList">
-                        <li className="list-group-item active">TodoList</li>
+                    <Link  to="/todoList">
+                        <li className="list-group-item active">List of User</li>
                     </Link>
                 </div>
             </div>
@@ -25,4 +25,4 @@ const Navbar = () => {
         </>
     )
 }
-export default Navbar
+export default Navbar;
